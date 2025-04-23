@@ -166,17 +166,12 @@ button.proximo {
         padding: 8px;
     }
 
-    h1 {
+    h1 h2 {
         font-size: 2.0rem;
         text-align: center;
         padding: 0 10px;
     }
 
-     h2 {
-        font-size: 2.5rem;
-        text-align: center;
-        padding: 0 10px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -198,8 +193,9 @@ button.proximo {
         font-size: 2.5rem;
     }
 
-      h2 {
+    h1  h2 {
         font-size: 2.5rem;
     }
 }
+
 
