@@ -10,34 +10,32 @@ body {
     
     height: 100vh;
 
-    background-color: #011007;
+    background-image: url('imagens/fundo.jpg'); /* Caminho para sua imagem */
+    background-size: cover; /* Para cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
 
-    color: #930aa2;
-
+    color: #156898;
     margin: 0;
-
     font-family: 'Poppins', sans-serif;
-
     padding: 10px;
-
     box-sizing: border-box;  
-
 }
 
 h1 {
         font-size: 3rem;
         text-align: center;
-        color: #fff;
+        color: #cfdde3;
         font-family: 'Arial Black', sans-serif;
         margin-bottom: 20px;
     
         /* Efeito 3D reto usando text-shadow */
         text-shadow:
-            1px 1px 0 #c50d35,
-            2px 2px 0 #9d1054,
-            3px 3px 0 #73077e,
-            4px 4px 0 #62066c,
-            5px 5px 0 #510559,
+            1px 1px 0 #d0d7d8,
+            2px 2px 0 #110c0f,
+            3px 3px 0 #110f11,
+            4px 4px 0 #de1111,
+            5px 5px 0 #1b181b,
             6px 6px 10px rgba(0, 0, 0, 0.7);
         
         transition: transform 0.3s ease;
