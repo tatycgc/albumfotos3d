@@ -1,214 +1,149 @@
 body {
-            
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-    
     align-items: center;
-    
     height: 100vh;
-
-    background-image: url('imagens/fundo.jpg'); /* Caminho para sua imagem */
-    background-size: cover; /* Para cobrir a tela inteira */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição */
-
+    background-image: url('imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #156898;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 h1 {
-        font-size: 3rem;
-        text-align: center;
-        color: #cfdde3;
-        font-family: 'Arial Black', sans-serif;
-        margin-bottom: 20px;
-    
-        /* Efeito 3D reto usando text-shadow */
-        text-shadow:
-            1px 1px 0 #d0d7d8,
-            2px 2px 0 #110c0f,
-            3px 3px 0 #110f11,
-            4px 4px 0 #de1111,
-            5px 5px 0 #1b181b,
-            6px 6px 10px rgba(0, 0, 0, 0.7);
-        
-        transition: transform 0.3s ease;
-    }
-    
-    h1:hover {
-        transform: scale(1.05);
-    }
+    font-size: 3rem;
+    text-align: center;
+    color: #cfdde3;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 20px;
+    text-shadow:
+        1px 1px 0 #d0d7d8,
+        2px 2px 0 #110c0f,
+        3px 3px 0 #110f11,
+        4px 4px 0 #de1111,
+        5px 5px 0 #1b181b,
+        6px 6px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
 
 .carrossel-container {
-
     position: relative;
-
     width: 80%;
-
     max-width: 1200px;
-
     height: 400px;
-
     perspective: 2000px;
-
-
     display: flex;
-
-
     justify-content: center;
-
-
     align-items: center;
-
 }
 
 .carrossel {
-
     width: 100%;
-  
     height: 100%;
-
     position: relative;
-
     transform-style: preserve-3d;
     transform: translateZ(-800px) rotateY(0deg);
     transition: transform 1s;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
 }
 
 .slide {
-
     width: 300px;
-
     height: 300px;
-
+    max-width: 90vw;
+    max-height: 90vw;
     background-color: #ccc;
-
     position: absolute;
-
     border: 1px solid #333;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-
     transition: transform 0.5s ease;
-
 }
 
 .slide a {
-
     display: block;
-
-
     width: 100%;
-
     height: 100%;
-
-
 }
 
-
 .slide img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     border-radius: 10px;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 button {
-    
     position: absolute;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     background-color: rgba(0, 0, 0, 0.5);
-
     color: #fff;
-
     border: none;
-
     padding: 10px;
-
     cursor: pointer;
-
     z-index: 100;
-
 }
 
 button.anterior {
-
     left: 0;
-
-
 }
 
 button.proximo {
-
     right: 0;
-                
 }
 
-
-/* Responsividade para tablets e celulares */
+/* Tablets */
 @media (max-width: 768px) {
-        .carrossel-container {
-            width: 100%;
-            height: 300px;
-        }
-    
-        .slide {
-            width: 220px;
-            height: 220px;
-        }
-    
-        button {
-            padding: 8px;
-        }
-    
-        h1 {
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 0 10px;
-        }
+    .carrossel-container {
+        width: 100%;
+        height: 320px;
     }
-    
-    @media (max-width: 480px) {
-        .carrossel-container {
-            height: 250px;
-        }
-    
-        .slide {
-            width: 180px;
-            height: 180px;
-        }
-    
-        button {
-            padding: 6px;
-            font-size: 1.2rem;
-        }
-    
-        h1 {
-            font-size: 1.2rem;
-        }
+
+    .slide {
+        width: 60vw;
+        height: 60vw;
     }
-    
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .carrossel-container {
+        height: 280px;
+    }
+
+    .slide {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        padding: 0 10px;
+    }
+
+    button {
+        padding: 6px;
+        font-size: 1.2rem;
+    }
+}
